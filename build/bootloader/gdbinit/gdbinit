@@ -1,0 +1,2 @@
+source /Users/macbookair/Desktop/ESP32-S3/USB_HID_TEST/build/bootloader/gdbinit/symbols
+source /Users/macbookair/Desktop/ESP32-S3/USB_HID_TEST/build/bootloader/gdbinit/connect
