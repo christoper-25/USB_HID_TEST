@@ -1,0 +1,1158 @@
+Command: C:\Espressif\tools\python\5.5.5\venv\Scripts\python.exe C:\Espressif\5.5.5\esp-idf\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings\build\USB_HID_TEST.elf C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\5.5.5\venv\Scripts\python.exe' 'C:\Espressif\5.5.5\esp-idf\tools\idf.py' '-p' 'COM4'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1548
+load:0x403c8700,len:0xda4
+load:0x403cb700,len:0x2e70
+entry 0x403c88f4
+[0;32mI (24) boot: ESP-IDF 08e0d30a 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug 15 2026 16:35:41[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0dc08h ( 56328) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001dc30 vaddr=3fc92900 size=023e8h (  9192) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1ee08h (126472) map[0m
+[0;32mI (125) esp_image: segment 3: paddr=0003ee30 vaddr=3fc94ce8 size=00bd4h (  3028) load[0m
+[0;32mI (126) esp_image: segment 4: paddr=0003fa0c vaddr=40374000 size=0e8b4h ( 59572) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=0004e2c8 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (149) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (168) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (175) app_init: Project name:     USB_HID_TEST[0m
+[0;32mI (179) app_init: App version:      9067980-dirty[0m
+[0;32mI (183) app_init: Compile time:     Aug 15 2026 16:36:11[0m
+[0;32mI (188) app_init: ELF file SHA256:  5e6cb5981...[0m
+[0;32mI (193) app_init: ESP-IDF:          08e0d30a[0m
+[0;32mI (197) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (201) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (205) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (208) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (215) heap_init: At 3FC963A0 len 00053370 (332 KiB): RAM[0m
+[0;32mI (220) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (225) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (230) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (236) spi_flash: detected chip: mxic[0m
+[0;32mI (239) spi_flash: flash io: dio[0m
+[0;33mW (242) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (254) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (261) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (267) main_task: Started on CPU0[0m
+[0;32mI (267) main_task: Calling app_main()[0m
+[0;32mI (277) SOIL_SENSOR: ================================================[0m
+[0;32mI (277) SOIL_SENSOR: ESP32-S3 USB HID SOIL SENSOR TEST[0m
+[0;32mI (287) SOIL_SENSOR: ESP-IDF 5.5.5[0m
+[0;32mI (287) SOIL_SENSOR: ================================================[0m
+[0;32mI (297) SOIL_SENSOR: Expected VID: 0x0487[0m
+[0;32mI (297) SOIL_SENSOR: Expected PID: 0x0007[0m
+[0;32mI (327) SOIL_SENSOR: USB Host installed[0m
+[0;32mI (797) SOIL_SENSOR: HID Host driver installed[0m
+[0;32mI (797) SOIL_SENSOR: ================================================[0m
+[0;32mI (797) SOIL_SENSOR: CONNECT USB SOIL SENSOR NOW[0m
+[0;32mI (797) SOIL_SENSOR: ================================================[0m
+[1;31mE (13257) USBH: Dev 2 EP 0 Error[0m
+[1;31mE (13257) ENUM: Bad transfer status 1: CHECK_CONFIG[0m
+[1;31mE (13257) ENUM: CHECK_CONFIG FAILED[0m
+[0;32mI (19277) SOIL_SENSOR: ================================================[0m
+[0;32mI (19277) SOIL_SENSOR: HID DEVICE CONNECTED[0m
+[0;32mI (19277) SOIL_SENSOR: ================================================[0m
+[0;32mI (19277) SOIL_SENSOR: ================================================[0m
+[0;32mI (19287) SOIL_SENSOR: OPENING HID DEVICE[0m
+[0;32mI (19287) SOIL_SENSOR: ================================================[0m
+[0;32mI (19297) SOIL_SENSOR: VID: 0487[0m
+[0;32mI (19297) SOIL_SENSOR: PID: 0007[0m
+[0;32mI (19307) SOIL_SENSOR: Interface : 0[0m
+[0;32mI (19307) SOIL_SENSOR: Subclass  : 0[0m
+[0;32mI (19307) SOIL_SENSOR: Protocol  : 0[0m
+[0;32mI (19317) SOIL_SENSOR: Address   : 2[0m
+[0;32mI (19317) SOIL_SENSOR: ================================================[0m
+[0;32mI (19317) SOIL_SENSOR: SOIL SENSOR DETECTED![0m
+[0;32mI (19327) SOIL_SENSOR: ================================================[0m
+[0;32mI (19337) SOIL_SENSOR: HID interface opened successfully[0m
+[0;32mI (19337) SOIL_SENSOR: Interface : 0[0m
+[0;32mI (19337) SOIL_SENSOR: Subclass  : 0[0m
+[0;32mI (19347) SOIL_SENSOR: Protocol  : 0[0m
+[0;32mI (19347) SOIL_SENSOR: Address   : 2[0m
+[0;32mI (19347) SOIL_SENSOR: Report descriptor length: 33[0m
+
+REPORT DESCRIPTOR (33 bytes):
+05 8C 09 01 A1 01 09 01 15 00 26 FF 00 75 08 95 
+40 81 02 09 01 15 00 26 FF 00 75 08 95 40 91 02 
+C0 
+[0;32mI (19367) SOIL_SENSOR: ================================================[0m
+[0;32mI (19377) SOIL_SENSOR: HID INPUT REPORTING STARTED[0m
+[0;32mI (19377) SOIL_SENSOR: ================================================[0m
+[0;32mI (20387) SOIL_SENSOR: Sensor ready; polling for readings every 2 seconds[0m
+[0;32mI (22387) SOIL_SENSOR: ================================================[0m
+[0;32mI (22387) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (22387) SOIL_SENSOR: ================================================[0m
+[0;32mI (22387) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (22407) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (22417) SOIL_SENSOR: ================================================[0m
+[0;32mI (22417) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (22427) SOIL_SENSOR: ================================================[0m
+[0;32mI (24427) SOIL_SENSOR: ================================================[0m
+[0;32mI (24427) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (24427) SOIL_SENSOR: ================================================[0m
+[0;32mI (24427) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (24447) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (24457) SOIL_SENSOR: ================================================[0m
+[0;32mI (24457) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (24467) SOIL_SENSOR: ================================================[0m
+[0;32mI (26467) SOIL_SENSOR: ================================================[0m
+[0;32mI (26467) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (26467) SOIL_SENSOR: ================================================[0m
+[0;32mI (26467) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (26487) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (26497) SOIL_SENSOR: ================================================[0m
+[0;32mI (26497) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (26507) SOIL_SENSOR: ================================================[0m
+[0;32mI (28507) SOIL_SENSOR: ================================================[0m
+[0;32mI (28507) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (28507) SOIL_SENSOR: ================================================[0m
+[0;32mI (28507) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (28527) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (28537) SOIL_SENSOR: ================================================[0m
+[0;32mI (28537) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (28547) SOIL_SENSOR: ================================================[0m
+[0;32mI (30547) SOIL_SENSOR: ================================================[0m
+[0;32mI (30547) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (30547) SOIL_SENSOR: ================================================[0m
+[0;32mI (30547) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (30567) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (30577) SOIL_SENSOR: ================================================[0m
+[0;32mI (30577) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (30587) SOIL_SENSOR: ================================================[0m
+[0;32mI (32587) SOIL_SENSOR: ================================================[0m
+[0;32mI (32587) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (32587) SOIL_SENSOR: ================================================[0m
+[0;32mI (32587) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (32607) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (32617) SOIL_SENSOR: ================================================[0m
+[0;32mI (32617) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (32627) SOIL_SENSOR: ================================================[0m
+[0;32mI (34627) SOIL_SENSOR: ================================================[0m
+[0;32mI (34627) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (34627) SOIL_SENSOR: ================================================[0m
+[0;32mI (34627) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (34647) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (34657) SOIL_SENSOR: ================================================[0m
+[0;32mI (34657) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (34667) SOIL_SENSOR: ================================================[0m
+[0;32mI (36667) SOIL_SENSOR: ================================================[0m
+[0;32mI (36667) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (36667) SOIL_SENSOR: ================================================[0m
+[0;32mI (36667) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (36687) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (36697) SOIL_SENSOR: ================================================[0m
+[0;32mI (36697) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (36707) SOIL_SENSOR: ================================================[0m
+[0;32mI (38707) SOIL_SENSOR: ================================================[0m
+[0;32mI (38707) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (38707) SOIL_SENSOR: ================================================[0m
+[0;32mI (38707) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (38727) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (38737) SOIL_SENSOR: ================================================[0m
+[0;32mI (38737) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (38747) SOIL_SENSOR: ================================================[0m
+[0;32mI (40747) SOIL_SENSOR: ================================================[0m
+[0;32mI (40747) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (40747) SOIL_SENSOR: ================================================[0m
+[0;32mI (40747) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (40767) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (40777) SOIL_SENSOR: ================================================[0m
+[0;32mI (40777) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (40787) SOIL_SENSOR: ================================================[0m
+[0;32mI (42787) SOIL_SENSOR: ================================================[0m
+[0;32mI (42787) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (42787) SOIL_SENSOR: ================================================[0m
+[0;32mI (42787) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (42807) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (42817) SOIL_SENSOR: ================================================[0m
+[0;32mI (42817) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (42827) SOIL_SENSOR: ================================================[0m
+[0;32mI (44827) SOIL_SENSOR: ================================================[0m
+[0;32mI (44827) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (44827) SOIL_SENSOR: ================================================[0m
+[0;32mI (44827) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (44847) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (44857) SOIL_SENSOR: ================================================[0m
+[0;32mI (44857) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (44867) SOIL_SENSOR: ================================================[0m
+[0;32mI (46867) SOIL_SENSOR: ================================================[0m
+[0;32mI (46867) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (46867) SOIL_SENSOR: ================================================[0m
+[0;32mI (46867) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (46887) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (46897) SOIL_SENSOR: ================================================[0m
+[0;32mI (46897) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (46907) SOIL_SENSOR: ================================================[0m
+[0;32mI (48907) SOIL_SENSOR: ================================================[0m
+[0;32mI (48907) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (48907) SOIL_SENSOR: ================================================[0m
+[0;32mI (48907) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (48927) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (48937) SOIL_SENSOR: ================================================[0m
+[0;32mI (48937) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (48947) SOIL_SENSOR: ================================================[0m
+[0;32mI (50947) SOIL_SENSOR: ================================================[0m
+[0;32mI (50947) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (50947) SOIL_SENSOR: ================================================[0m
+[0;32mI (50947) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (50967) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (50977) SOIL_SENSOR: ================================================[0m
+[0;32mI (50977) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (50987) SOIL_SENSOR: ================================================[0m
+[0;32mI (52987) SOIL_SENSOR: ================================================[0m
+[0;32mI (52987) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (52987) SOIL_SENSOR: ================================================[0m
+[0;32mI (52987) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (53007) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (53017) SOIL_SENSOR: ================================================[0m
+[0;32mI (53017) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (53027) SOIL_SENSOR: ================================================[0m
+[0;32mI (55027) SOIL_SENSOR: ================================================[0m
+[0;32mI (55027) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (55027) SOIL_SENSOR: ================================================[0m
+[0;32mI (55027) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (55047) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (55057) SOIL_SENSOR: ================================================[0m
+[0;32mI (55057) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (55067) SOIL_SENSOR: ================================================[0m
+[0;32mI (57067) SOIL_SENSOR: ================================================[0m
+[0;32mI (57067) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (57067) SOIL_SENSOR: ================================================[0m
+[0;32mI (57067) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (57087) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (57097) SOIL_SENSOR: ================================================[0m
+[0;32mI (57097) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (57107) SOIL_SENSOR: ================================================[0m
+[0;32mI (59107) SOIL_SENSOR: ================================================[0m
+[0;32mI (59107) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (59107) SOIL_SENSOR: ================================================[0m
+[0;32mI (59107) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (59127) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (59137) SOIL_SENSOR: ================================================[0m
+[0;32mI (59137) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (59147) SOIL_SENSOR: ================================================[0m
+[0;32mI (61147) SOIL_SENSOR: ================================================[0m
+[0;32mI (61147) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (61147) SOIL_SENSOR: ================================================[0m
+[0;32mI (61147) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (61167) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (61177) SOIL_SENSOR: ================================================[0m
+[0;32mI (61177) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (61187) SOIL_SENSOR: ================================================[0m
+[0;32mI (63187) SOIL_SENSOR: ================================================[0m
+[0;32mI (63187) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (63187) SOIL_SENSOR: ================================================[0m
+[0;32mI (63187) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (63207) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (63217) SOIL_SENSOR: ================================================[0m
+[0;32mI (63217) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (63227) SOIL_SENSOR: ================================================[0m
+[0;32mI (65227) SOIL_SENSOR: ================================================[0m
+[0;32mI (65227) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (65227) SOIL_SENSOR: ================================================[0m
+[0;32mI (65227) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (65247) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (65257) SOIL_SENSOR: ================================================[0m
+[0;32mI (65257) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (65267) SOIL_SENSOR: ================================================[0m
+[0;32mI (67267) SOIL_SENSOR: ================================================[0m
+[0;32mI (67267) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (67267) SOIL_SENSOR: ================================================[0m
+[0;32mI (67267) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (67287) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (67297) SOIL_SENSOR: ================================================[0m
+[0;32mI (67297) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (67307) SOIL_SENSOR: ================================================[0m
+[0;32mI (69307) SOIL_SENSOR: ================================================[0m
+[0;32mI (69307) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (69307) SOIL_SENSOR: ================================================[0m
+[0;32mI (69307) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (69327) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (69337) SOIL_SENSOR: ================================================[0m
+[0;32mI (69337) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (69347) SOIL_SENSOR: ================================================[0m
+[0;32mI (71347) SOIL_SENSOR: ================================================[0m
+[0;32mI (71347) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (71347) SOIL_SENSOR: ================================================[0m
+[0;32mI (71347) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (71367) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (71377) SOIL_SENSOR: ================================================[0m
+[0;32mI (71377) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (71387) SOIL_SENSOR: ================================================[0m
+[0;32mI (73387) SOIL_SENSOR: ================================================[0m
+[0;32mI (73387) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (73387) SOIL_SENSOR: ================================================[0m
+[0;32mI (73387) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (73407) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (73417) SOIL_SENSOR: ================================================[0m
+[0;32mI (73417) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (73427) SOIL_SENSOR: ================================================[0m
+[0;32mI (75427) SOIL_SENSOR: ================================================[0m
+[0;32mI (75427) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (75427) SOIL_SENSOR: ================================================[0m
+[0;32mI (75427) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (75447) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (75457) SOIL_SENSOR: ================================================[0m
+[0;32mI (75457) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (75467) SOIL_SENSOR: ================================================[0m
+[0;32mI (77467) SOIL_SENSOR: ================================================[0m
+[0;32mI (77467) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (77467) SOIL_SENSOR: ================================================[0m
+[0;32mI (77467) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (77487) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (77497) SOIL_SENSOR: ================================================[0m
+[0;32mI (77497) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (77507) SOIL_SENSOR: ================================================[0m
+[0;32mI (79507) SOIL_SENSOR: ================================================[0m
+[0;32mI (79507) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (79507) SOIL_SENSOR: ================================================[0m
+[0;32mI (79507) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (79527) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (79537) SOIL_SENSOR: ================================================[0m
+[0;32mI (79537) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (79547) SOIL_SENSOR: ================================================[0m
+[0;32mI (81547) SOIL_SENSOR: ================================================[0m
+[0;32mI (81547) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (81547) SOIL_SENSOR: ================================================[0m
+[0;32mI (81547) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (81567) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (81577) SOIL_SENSOR: ================================================[0m
+[0;32mI (81577) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (81587) SOIL_SENSOR: ================================================[0m
+[0;32mI (83587) SOIL_SENSOR: ================================================[0m
+[0;32mI (83587) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (83587) SOIL_SENSOR: ================================================[0m
+[0;32mI (83587) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (83607) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (83617) SOIL_SENSOR: ================================================[0m
+[0;32mI (83617) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (83627) SOIL_SENSOR: ================================================[0m
+[0;32mI (85627) SOIL_SENSOR: ================================================[0m
+[0;32mI (85627) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (85627) SOIL_SENSOR: ================================================[0m
+[0;32mI (85627) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (85647) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (85657) SOIL_SENSOR: ================================================[0m
+[0;32mI (85657) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (85667) SOIL_SENSOR: ================================================[0m
+[0;32mI (87667) SOIL_SENSOR: ================================================[0m
+[0;32mI (87667) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (87667) SOIL_SENSOR: ================================================[0m
+[0;32mI (87667) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (87687) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (87697) SOIL_SENSOR: ================================================[0m
+[0;32mI (87697) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (87707) SOIL_SENSOR: ================================================[0m
+[0;32mI (89707) SOIL_SENSOR: ================================================[0m
+[0;32mI (89707) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (89707) SOIL_SENSOR: ================================================[0m
+[0;32mI (89707) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (89727) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (89737) SOIL_SENSOR: ================================================[0m
+[0;32mI (89737) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (89747) SOIL_SENSOR: ================================================[0m
+[0;32mI (91747) SOIL_SENSOR: ================================================[0m
+[0;32mI (91747) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (91747) SOIL_SENSOR: ================================================[0m
+[0;32mI (91747) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (91767) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (91777) SOIL_SENSOR: ================================================[0m
+[0;32mI (91777) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (91787) SOIL_SENSOR: ================================================[0m
+[0;32mI (93787) SOIL_SENSOR: ================================================[0m
+[0;32mI (93787) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (93787) SOIL_SENSOR: ================================================[0m
+[0;32mI (93787) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (93807) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (93817) SOIL_SENSOR: ================================================[0m
+[0;32mI (93817) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (93827) SOIL_SENSOR: ================================================[0m
+[0;32mI (95827) SOIL_SENSOR: ================================================[0m
+[0;32mI (95827) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (95827) SOIL_SENSOR: ================================================[0m
+[0;32mI (95827) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (95847) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (95857) SOIL_SENSOR: ================================================[0m
+[0;32mI (95857) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (95867) SOIL_SENSOR: ================================================[0m
+[0;32mI (97867) SOIL_SENSOR: ================================================[0m
+[0;32mI (97867) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (97867) SOIL_SENSOR: ================================================[0m
+[0;32mI (97867) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (97887) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (97897) SOIL_SENSOR: ================================================[0m
+[0;32mI (97897) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (97907) SOIL_SENSOR: ================================================[0m
+[0;32mI (99907) SOIL_SENSOR: ================================================[0m
+[0;32mI (99907) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (99907) SOIL_SENSOR: ================================================[0m
+[0;32mI (99907) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (99927) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (99937) SOIL_SENSOR: ================================================[0m
+[0;32mI (99937) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (99947) SOIL_SENSOR: ================================================[0m
+[0;32mI (101947) SOIL_SENSOR: ================================================[0m
+[0;32mI (101947) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (101947) SOIL_SENSOR: ================================================[0m
+[0;32mI (101947) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (101967) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (101977) SOIL_SENSOR: ================================================[0m
+[0;32mI (101977) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (101987) SOIL_SENSOR: ================================================[0m
+[0;32mI (103987) SOIL_SENSOR: ================================================[0m
+[0;32mI (103987) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (103987) SOIL_SENSOR: ================================================[0m
+[0;32mI (103987) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (104007) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (104017) SOIL_SENSOR: ================================================[0m
+[0;32mI (104017) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (104027) SOIL_SENSOR: ================================================[0m
+[0;32mI (106027) SOIL_SENSOR: ================================================[0m
+[0;32mI (106027) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (106027) SOIL_SENSOR: ================================================[0m
+[0;32mI (106027) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (106047) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (106057) SOIL_SENSOR: ================================================[0m
+[0;32mI (106057) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (106067) SOIL_SENSOR: ================================================[0m
+[0;32mI (108067) SOIL_SENSOR: ================================================[0m
+[0;32mI (108067) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (108067) SOIL_SENSOR: ================================================[0m
+[0;32mI (108067) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (108087) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (108097) SOIL_SENSOR: ================================================[0m
+[0;32mI (108097) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (108107) SOIL_SENSOR: ================================================[0m
+[0;32mI (110107) SOIL_SENSOR: ================================================[0m
+[0;32mI (110107) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (110107) SOIL_SENSOR: ================================================[0m
+[0;32mI (110107) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (110127) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (110137) SOIL_SENSOR: ================================================[0m
+[0;32mI (110137) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (110147) SOIL_SENSOR: ================================================[0m
+[0;32mI (112147) SOIL_SENSOR: ================================================[0m
+[0;32mI (112147) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (112147) SOIL_SENSOR: ================================================[0m
+[0;32mI (112147) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (112167) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (112177) SOIL_SENSOR: ================================================[0m
+[0;32mI (112177) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (112187) SOIL_SENSOR: ================================================[0m
+[0;32mI (114187) SOIL_SENSOR: ================================================[0m
+[0;32mI (114187) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (114187) SOIL_SENSOR: ================================================[0m
+[0;32mI (114187) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (114207) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (114217) SOIL_SENSOR: ================================================[0m
+[0;32mI (114217) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (114227) SOIL_SENSOR: ================================================[0m
+[0;32mI (116227) SOIL_SENSOR: ================================================[0m
+[0;32mI (116227) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (116227) SOIL_SENSOR: ================================================[0m
+[0;32mI (116227) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (116247) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (116257) SOIL_SENSOR: ================================================[0m
+[0;32mI (116257) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (116267) SOIL_SENSOR: ================================================[0m
+[0;32mI (118267) SOIL_SENSOR: ================================================[0m
+[0;32mI (118267) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (118267) SOIL_SENSOR: ================================================[0m
+[0;32mI (118267) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (118287) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (118297) SOIL_SENSOR: ================================================[0m
+[0;32mI (118297) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (118307) SOIL_SENSOR: ================================================[0m
+[0;32mI (120307) SOIL_SENSOR: ================================================[0m
+[0;32mI (120307) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (120307) SOIL_SENSOR: ================================================[0m
+[0;32mI (120307) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (120327) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (120337) SOIL_SENSOR: ================================================[0m
+[0;32mI (120337) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (120347) SOIL_SENSOR: ================================================[0m
+[0;32mI (122347) SOIL_SENSOR: ================================================[0m
+[0;32mI (122347) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (122347) SOIL_SENSOR: ================================================[0m
+[0;32mI (122347) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (122367) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (122377) SOIL_SENSOR: ================================================[0m
+[0;32mI (122377) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (122387) SOIL_SENSOR: ================================================[0m
+[0;32mI (124387) SOIL_SENSOR: ================================================[0m
+[0;32mI (124387) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (124387) SOIL_SENSOR: ================================================[0m
+[0;32mI (124387) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (124407) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (124417) SOIL_SENSOR: ================================================[0m
+[0;32mI (124417) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (124427) SOIL_SENSOR: ================================================[0m
+[0;32mI (126427) SOIL_SENSOR: ================================================[0m
+[0;32mI (126427) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (126427) SOIL_SENSOR: ================================================[0m
+[0;32mI (126427) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (126447) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (126457) SOIL_SENSOR: ================================================[0m
+[0;32mI (126457) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (126467) SOIL_SENSOR: ================================================[0m
+[0;32mI (128467) SOIL_SENSOR: ================================================[0m
+[0;32mI (128467) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (128467) SOIL_SENSOR: ================================================[0m
+[0;32mI (128467) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (128487) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (128497) SOIL_SENSOR: ================================================[0m
+[0;32mI (128497) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (128507) SOIL_SENSOR: ================================================[0m
+[0;32mI (130507) SOIL_SENSOR: ================================================[0m
+[0;32mI (130507) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (130507) SOIL_SENSOR: ================================================[0m
+[0;32mI (130507) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (130527) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (130537) SOIL_SENSOR: ================================================[0m
+[0;32mI (130537) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (130547) SOIL_SENSOR: ================================================[0m
+[0;32mI (132547) SOIL_SENSOR: ================================================[0m
+[0;32mI (132547) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (132547) SOIL_SENSOR: ================================================[0m
+[0;32mI (132547) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (132567) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (132577) SOIL_SENSOR: ================================================[0m
+[0;32mI (132577) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (132587) SOIL_SENSOR: ================================================[0m
+[0;32mI (134587) SOIL_SENSOR: ================================================[0m
+[0;32mI (134587) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (134587) SOIL_SENSOR: ================================================[0m
+[0;32mI (134587) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (134607) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (134617) SOIL_SENSOR: ================================================[0m
+[0;32mI (134617) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (134627) SOIL_SENSOR: ================================================[0m
+[0;32mI (136627) SOIL_SENSOR: ================================================[0m
+[0;32mI (136627) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (136627) SOIL_SENSOR: ================================================[0m
+[0;32mI (136627) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (136647) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (136657) SOIL_SENSOR: ================================================[0m
+[0;32mI (136657) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (136667) SOIL_SENSOR: ================================================[0m
+[0;32mI (138667) SOIL_SENSOR: ================================================[0m
+[0;32mI (138667) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (138667) SOIL_SENSOR: ================================================[0m
+[0;32mI (138667) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (138687) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (138697) SOIL_SENSOR: ================================================[0m
+[0;32mI (138697) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (138707) SOIL_SENSOR: ================================================[0m
+[0;32mI (140707) SOIL_SENSOR: ================================================[0m
+[0;32mI (140707) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (140707) SOIL_SENSOR: ================================================[0m
+[0;32mI (140707) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (140727) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (140737) SOIL_SENSOR: ================================================[0m
+[0;32mI (140737) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (140747) SOIL_SENSOR: ================================================[0m
+[0;32mI (142747) SOIL_SENSOR: ================================================[0m
+[0;32mI (142747) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (142747) SOIL_SENSOR: ================================================[0m
+[0;32mI (142747) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (142767) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (142777) SOIL_SENSOR: ================================================[0m
+[0;32mI (142777) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (142787) SOIL_SENSOR: ================================================[0m
+[0;32mI (144787) SOIL_SENSOR: ================================================[0m
+[0;32mI (144787) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (144787) SOIL_SENSOR: ================================================[0m
+[0;32mI (144787) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (144807) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (144817) SOIL_SENSOR: ================================================[0m
+[0;32mI (144817) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (144827) SOIL_SENSOR: ================================================[0m
+[0;32mI (146827) SOIL_SENSOR: ================================================[0m
+[0;32mI (146827) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (146827) SOIL_SENSOR: ================================================[0m
+[0;32mI (146827) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (146847) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (146857) SOIL_SENSOR: ================================================[0m
+[0;32mI (146857) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (146867) SOIL_SENSOR: ================================================[0m
+[0;32mI (148867) SOIL_SENSOR: ================================================[0m
+[0;32mI (148867) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (148867) SOIL_SENSOR: ================================================[0m
+[0;32mI (148867) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (148887) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (148897) SOIL_SENSOR: ================================================[0m
+[0;32mI (148897) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (148907) SOIL_SENSOR: ================================================[0m
+[0;32mI (150907) SOIL_SENSOR: ================================================[0m
+[0;32mI (150907) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (150907) SOIL_SENSOR: ================================================[0m
+[0;32mI (150907) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (150927) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (150937) SOIL_SENSOR: ================================================[0m
+[0;32mI (150937) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (150947) SOIL_SENSOR: ================================================[0m
+[0;32mI (152947) SOIL_SENSOR: ================================================[0m
+[0;32mI (152947) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (152947) SOIL_SENSOR: ================================================[0m
+[0;32mI (152947) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (152967) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (152977) SOIL_SENSOR: ================================================[0m
+[0;32mI (152977) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (152987) SOIL_SENSOR: ================================================[0m
+[0;32mI (154987) SOIL_SENSOR: ================================================[0m
+[0;32mI (154987) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (154987) SOIL_SENSOR: ================================================[0m
+[0;32mI (154987) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (155007) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (155017) SOIL_SENSOR: ================================================[0m
+[0;32mI (155017) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (155027) SOIL_SENSOR: ================================================[0m
+[0;32mI (157027) SOIL_SENSOR: ================================================[0m
+[0;32mI (157027) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (157027) SOIL_SENSOR: ================================================[0m
+[0;32mI (157027) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (157047) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (157057) SOIL_SENSOR: ================================================[0m
+[0;32mI (157057) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (157067) SOIL_SENSOR: ================================================[0m
+[0;32mI (159067) SOIL_SENSOR: ================================================[0m
+[0;32mI (159067) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (159067) SOIL_SENSOR: ================================================[0m
+[0;32mI (159067) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (159087) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (159097) SOIL_SENSOR: ================================================[0m
+[0;32mI (159097) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (159107) SOIL_SENSOR: ================================================[0m
+[0;32mI (161107) SOIL_SENSOR: ================================================[0m
+[0;32mI (161107) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (161107) SOIL_SENSOR: ================================================[0m
+[0;32mI (161107) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (161127) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (161137) SOIL_SENSOR: ================================================[0m
+[0;32mI (161137) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (161147) SOIL_SENSOR: ================================================[0m
+[0;32mI (163147) SOIL_SENSOR: ================================================[0m
+[0;32mI (163147) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (163147) SOIL_SENSOR: ================================================[0m
+[0;32mI (163147) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (163167) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (163177) SOIL_SENSOR: ================================================[0m
+[0;32mI (163177) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (163187) SOIL_SENSOR: ================================================[0m
+[0;32mI (165187) SOIL_SENSOR: ================================================[0m
+[0;32mI (165187) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (165187) SOIL_SENSOR: ================================================[0m
+[0;32mI (165187) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (165207) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (165217) SOIL_SENSOR: ================================================[0m
+[0;32mI (165217) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (165227) SOIL_SENSOR: ================================================[0m
+[0;32mI (167227) SOIL_SENSOR: ================================================[0m
+[0;32mI (167227) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (167227) SOIL_SENSOR: ================================================[0m
+[0;32mI (167227) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (167247) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (167257) SOIL_SENSOR: ================================================[0m
+[0;32mI (167257) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (167267) SOIL_SENSOR: ================================================[0m
+[0;32mI (169267) SOIL_SENSOR: ================================================[0m
+[0;32mI (169267) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (169267) SOIL_SENSOR: ================================================[0m
+[0;32mI (169267) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (169287) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (169297) SOIL_SENSOR: ================================================[0m
+[0;32mI (169297) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (169307) SOIL_SENSOR: ================================================[0m
+[0;32mI (171307) SOIL_SENSOR: ================================================[0m
+[0;32mI (171307) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (171307) SOIL_SENSOR: ================================================[0m
+[0;32mI (171307) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (171327) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (171337) SOIL_SENSOR: ================================================[0m
+[0;32mI (171337) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (171347) SOIL_SENSOR: ================================================[0m
+[0;32mI (173347) SOIL_SENSOR: ================================================[0m
+[0;32mI (173347) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (173347) SOIL_SENSOR: ================================================[0m
+[0;32mI (173347) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (173367) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (173377) SOIL_SENSOR: ================================================[0m
+[0;32mI (173377) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (173387) SOIL_SENSOR: ================================================[0m
+[0;32mI (175387) SOIL_SENSOR: ================================================[0m
+[0;32mI (175387) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (175387) SOIL_SENSOR: ================================================[0m
+[0;32mI (175387) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (175407) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (175417) SOIL_SENSOR: ================================================[0m
+[0;32mI (175417) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (175427) SOIL_SENSOR: ================================================[0m
+[0;32mI (177427) SOIL_SENSOR: ================================================[0m
+[0;32mI (177427) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (177427) SOIL_SENSOR: ================================================[0m
+[0;32mI (177427) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (177447) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (177457) SOIL_SENSOR: ================================================[0m
+[0;32mI (177457) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (177467) SOIL_SENSOR: ================================================[0m
+[0;32mI (179467) SOIL_SENSOR: ================================================[0m
+[0;32mI (179467) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (179467) SOIL_SENSOR: ================================================[0m
+[0;32mI (179467) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (179487) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (179497) SOIL_SENSOR: ================================================[0m
+[0;32mI (179497) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (179507) SOIL_SENSOR: ================================================[0m
+[0;32mI (181507) SOIL_SENSOR: ================================================[0m
+[0;32mI (181507) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (181507) SOIL_SENSOR: ================================================[0m
+[0;32mI (181507) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (181527) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (181537) SOIL_SENSOR: ================================================[0m
+[0;32mI (181537) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (181547) SOIL_SENSOR: ================================================[0m
+[0;32mI (183547) SOIL_SENSOR: ================================================[0m
+[0;32mI (183547) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (183547) SOIL_SENSOR: ================================================[0m
+[0;32mI (183547) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (183567) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (183577) SOIL_SENSOR: ================================================[0m
+[0;32mI (183577) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (183587) SOIL_SENSOR: ================================================[0m
+[0;32mI (185587) SOIL_SENSOR: ================================================[0m
+[0;32mI (185587) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (185587) SOIL_SENSOR: ================================================[0m
+[0;32mI (185587) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (185607) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (185617) SOIL_SENSOR: ================================================[0m
+[0;32mI (185617) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (185627) SOIL_SENSOR: ================================================[0m
+[0;32mI (187627) SOIL_SENSOR: ================================================[0m
+[0;32mI (187627) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (187627) SOIL_SENSOR: ================================================[0m
+[0;32mI (187627) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (187647) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (187657) SOIL_SENSOR: ================================================[0m
+[0;32mI (187657) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (187667) SOIL_SENSOR: ================================================[0m
+[0;32mI (189667) SOIL_SENSOR: ================================================[0m
+[0;32mI (189667) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (189667) SOIL_SENSOR: ================================================[0m
+[0;32mI (189667) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (189687) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (189697) SOIL_SENSOR: ================================================[0m
+[0;32mI (189697) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (189707) SOIL_SENSOR: ================================================[0m
+[0;32mI (191707) SOIL_SENSOR: ================================================[0m
+[0;32mI (191707) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (191707) SOIL_SENSOR: ================================================[0m
+[0;32mI (191707) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (191727) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (191737) SOIL_SENSOR: ================================================[0m
+[0;32mI (191737) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (191747) SOIL_SENSOR: ================================================[0m
+[0;32mI (193747) SOIL_SENSOR: ================================================[0m
+[0;32mI (193747) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (193747) SOIL_SENSOR: ================================================[0m
+[0;32mI (193747) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (193767) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (193777) SOIL_SENSOR: ================================================[0m
+[0;32mI (193777) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (193787) SOIL_SENSOR: ================================================[0m
+[0;32mI (195787) SOIL_SENSOR: ================================================[0m
+[0;32mI (195787) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (195787) SOIL_SENSOR: ================================================[0m
+[0;32mI (195787) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (195807) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (195817) SOIL_SENSOR: ================================================[0m
+[0;32mI (195817) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (195827) SOIL_SENSOR: ================================================[0m
+[0;32mI (197827) SOIL_SENSOR: ================================================[0m
+[0;32mI (197827) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (197827) SOIL_SENSOR: ================================================[0m
+[0;32mI (197827) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (197847) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (197857) SOIL_SENSOR: ================================================[0m
+[0;32mI (197857) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (197867) SOIL_SENSOR: ================================================[0m
+[0;32mI (199867) SOIL_SENSOR: ================================================[0m
+[0;32mI (199867) SOIL_SENSOR: REAL-TIME SENSOR COMMAND[0m
+[0;32mI (199867) SOIL_SENSOR: ================================================[0m
+[0;32mI (199867) SOIL_SENSOR: COMMAND (64 bytes):[0m
+55 01 22 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 E7 46 
+[0;32mI (199887) SOIL_SENSOR: Sending HID SET_REPORT...[0m
+[0;32mI (199897) SOIL_SENSOR: ================================================[0m
+[0;32mI (199897) SOIL_SENSOR: SENSOR COMMAND SENT SUCCESSFULLY[0m
+[0;32mI (199907) SOIL_SENSOR: ================================================[0m

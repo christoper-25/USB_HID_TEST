@@ -37,6 +37,9 @@ typedef struct {
 } hid_event_t;
 
 static QueueHandle_t hid_event_queue = NULL;
+static hid_host_device_handle_t active_sensor = NULL;
+
+static void print_sensor_reading(const uint8_t *response, size_t length);
 
 
 /* =========================================================
@@ -66,7 +69,7 @@ static void print_hex(
 /* =========================================================
  * SEND SENSOR COMMAND
  *
- * Uses HID SET_REPORT.
+ * Uses the HID interrupt OUT endpoint.
  *
  * Report descriptor:
  *
@@ -129,27 +132,12 @@ static esp_err_t send_realtime_command(
     );
 
 
-    ESP_LOGI(
-        TAG,
-        "Sending HID SET_REPORT..."
-    );
+    ESP_LOGI(TAG, "Sending HID interrupt OUT report...");
 
-
-    /*
-     * HID output report
-     *
-     * HID report type:
-     * HID_REPORT_TYPE_OUTPUT
-     *
-     * Report ID:
-     * 0
-     */
 
     esp_err_t ret =
-        hid_class_request_set_report(
+        hid_host_device_send_output_report(
             device,
-            HID_REPORT_TYPE_OUTPUT,
-            0,
             command,
             sizeof(command)
         );
@@ -159,7 +147,7 @@ static esp_err_t send_realtime_command(
 
         ESP_LOGE(
             TAG,
-            "HID SET_REPORT failed: %s",
+            "HID interrupt OUT send failed: %s",
             esp_err_to_name(ret)
         );
 
@@ -768,29 +756,8 @@ static void open_hid_device(
     );
 
 
-    /* =====================================================
-     * SEND SENSOR COMMAND
-     * ===================================================== */
-
-    send_realtime_command(
-        device
-    );
-
-
-    ESP_LOGI(
-        TAG,
-        "================================================"
-    );
-
-    ESP_LOGI(
-        TAG,
-        "LISTENING FOR SENSOR RESPONSES"
-    );
-
-    ESP_LOGI(
-        TAG,
-        "================================================"
-    );
+    active_sensor = device;
+    ESP_LOGI(TAG, "Sensor ready; polling for readings every 2 seconds");
 }
 
 
@@ -952,13 +919,14 @@ void app_main(void)
         hid_event_t event;
 
 
-        if (
-            xQueueReceive(
-                hid_event_queue,
-                &event,
-                portMAX_DELAY
-            )
-        ) {
+        if (!xQueueReceive(hid_event_queue, &event, pdMS_TO_TICKS(2000))) {
+            if (active_sensor != NULL) {
+                send_realtime_command(active_sensor);
+            }
+            continue;
+        }
+
+        {
 
             /* ---------------------------------------------
              * CONNECTED
@@ -1011,6 +979,8 @@ void app_main(void)
                     event.length
                 );
 
+                print_sensor_reading(event.data, event.length);
+
 
                 ESP_LOGI(
                     TAG,
@@ -1027,6 +997,10 @@ void app_main(void)
                 event.type ==
                 HID_EVENT_DISCONNECTED
             ) {
+
+                if (active_sensor == event.handle) {
+                    active_sensor = NULL;
+                }
 
                 ESP_LOGW(
                     TAG,
@@ -1045,4 +1019,30 @@ void app_main(void)
             }
         }
     }
+}
+
+static void print_sensor_reading(const uint8_t *response, size_t length)
+{
+    if (length < 56) {
+        ESP_LOGW(TAG, "Ignoring short sensor response: %zu bytes", length);
+        return;
+    }
+
+    const uint16_t temperature = ((uint16_t)response[11] << 8) | response[12];
+    const uint16_t humidity = ((uint16_t)response[18] << 8) | response[19];
+    const uint16_t conductivity = ((uint16_t)response[25] << 8) | response[26];
+    const uint16_t ph = ((uint16_t)response[32] << 8) | response[33];
+    const uint16_t nitrogen = ((uint16_t)response[39] << 8) | response[40];
+    const uint16_t phosphorus = ((uint16_t)response[46] << 8) | response[47];
+    const uint16_t potassium = ((uint16_t)response[53] << 8) | response[54];
+
+    ESP_LOGI(TAG, "================ SOIL READING ================");
+    ESP_LOGI(TAG, "Temperature  : %.1f C", temperature / 10.0f);
+    ESP_LOGI(TAG, "Humidity     : %.1f %%", humidity / 10.0f);
+    ESP_LOGI(TAG, "Conductivity : %u uS/cm", conductivity);
+    ESP_LOGI(TAG, "pH           : %.1f", ph / 10.0f);
+    ESP_LOGI(TAG, "Nitrogen     : %u mg/kg", nitrogen);
+    ESP_LOGI(TAG, "Phosphorus   : %u mg/kg", phosphorus);
+    ESP_LOGI(TAG, "Potassium    : %u mg/kg", potassium);
+    ESP_LOGI(TAG, "==============================================");
 }

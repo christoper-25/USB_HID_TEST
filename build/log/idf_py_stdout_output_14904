@@ -1,0 +1,20 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings\build\bootloader && C:\Espressif\tools\python\5.5.5\venv\Scripts\python.exe C:/Espressif/5.5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/bootloader/bootloader.bin"
+Bootloader binary size 0x51b0 bytes. 0x2e50 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hid_host_example.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+Skipping linker script generation, section names unchanged
+[7/9] Linking CXX executable USB_HID_TEST.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.1
+Creating ESP32-S3 image...
+Merged 2 ELF sections.
+Successfully created ESP32-S3 image.
+Generated C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/USB_HID_TEST.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings\build && C:\Espressif\tools\python\5.5.5\venv\Scripts\python.exe C:/Espressif/5.5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/partition_table/partition-table.bin C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/USB_HID_TEST.bin"
+USB_HID_TEST.bin binary size 0x3e4f0 bytes. Smallest app partition is 0x100000 
+bytes. 0xc1b10 bytes (76%) free.

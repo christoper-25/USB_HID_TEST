@@ -402,6 +402,16 @@ esp_err_t hid_class_request_set_report(hid_host_device_handle_t hid_dev_handle,
                                        size_t report_length);
 
 /**
+ * @brief Send a report using the HID interface interrupt OUT endpoint.
+ *
+ * This is required by HID devices that do not accept output reports through
+ * the control-transfer SET_REPORT request.
+ */
+esp_err_t hid_host_device_send_output_report(hid_host_device_handle_t hid_dev_handle,
+                                             const uint8_t *report,
+                                             size_t report_length);
+
+/**
  * @brief Send a HID class-specific Set_Idle request.
  *
  * @param[in] hid_dev_handle HID device handle.

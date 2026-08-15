@@ -1,0 +1,15 @@
+Command: cmake -G Ninja -B C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\5.5.5\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True -DCONFIGDEP_ENABLE=True C:\Users\ADMIN\Desktop\xampp\htdocs\laravel\sensor_readings
+Loading defaults file C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig.defaults...
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished with notifications
+NOTE: C:/Espressif/5.5.5/esp-idf/components/partition_table/Kconfig.projbuild:129: PARTITION_TABLE_CUSTOM_FILENAME has user-set value partitions.csv from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_hw_support/Kconfig:416: ESP_INTR_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_libc/Kconfig:46: LIBC_MISC_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_rom/Kconfig:3: ESP_ROM_PRINT_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_stdio/Kconfig:150: ESP_CONSOLE_UART_BAUDRATE has user-set value 115200 from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_system/Kconfig:12: ESP_SYSTEM_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/esp_timer/Kconfig:3: ESP_TIMER_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/log/Kconfig:79: LOG_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+NOTE: C:/Espressif/5.5.5/esp-idf/components/spi_flash/Kconfig:178: SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM has user-set value y from C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/sdkconfig but is not visible (disabled dependency)
+HINT: Disabled symbols/choices are not written into sdkconfig file. Setting their user value has no effect.
