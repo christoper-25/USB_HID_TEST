@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/Users/macbookair/esp/esp-idf/v5.5.5/esp-idf/components/bootloader/subproject
+source_dir=C:/Espressif/5.5.5/esp-idf/components/bootloader/subproject
 work_dir=
 

@@ -1,2 +1,2 @@
-source /Users/macbookair/Desktop/ESP32-S3/USB_HID_TEST/build/gdbinit/symbols
-source /Users/macbookair/Desktop/ESP32-S3/USB_HID_TEST/build/gdbinit/connect
+source C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/gdbinit/symbols
+source C:/Users/ADMIN/Desktop/xampp/htdocs/laravel/sensor_readings/build/gdbinit/connect

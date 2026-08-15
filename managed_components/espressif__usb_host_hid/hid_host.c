@@ -113,6 +113,8 @@ typedef struct hid_interface {
     hid_host_dev_params_t dev_params;       /**< USB device parameters */
     uint8_t ep_in;                          /**< Interrupt IN EP number */
     uint16_t ep_in_mps;                     /**< Interrupt IN max size */
+    uint8_t ep_out;                         /**< Interrupt OUT EP number */
+    uint16_t ep_out_mps;                    /**< Interrupt OUT max size */
     uint8_t country_code;                   /**< Country code */
     uint16_t report_desc_size;              /**< Size of Report */
     uint8_t *report_desc;                   /**< Pointer to HID Report */
@@ -281,6 +283,20 @@ static inline const usb_ep_desc_t *get_iface_ep_in(const usb_intf_desc_t *iface_
     return NULL;
 }
 
+static inline const usb_ep_desc_t *get_iface_ep_out(const usb_intf_desc_t *iface_desc,
+                                                     const size_t total_length)
+{
+    assert(iface_desc);
+    for (int i = 0; i < iface_desc->bNumEndpoints; i++) {
+        int ep_offset = 0;
+        const usb_ep_desc_t *ep_desc = usb_parse_endpoint_descriptor_by_index(iface_desc, i, total_length, &ep_offset);
+        if (ep_desc && !USB_EP_DESC_GET_EP_DIR(ep_desc)) {
+            return ep_desc;
+        }
+    }
+    return NULL;
+}
+
 /**
  * @brief Check HID interface descriptor present
  *
@@ -356,7 +372,8 @@ static inline void hid_host_user_device_callback(hid_iface_t *iface,
 static esp_err_t hid_host_add_interface(hid_device_t *hid_device,
                                         const usb_intf_desc_t *iface_desc,
                                         const hid_descriptor_t *hid_desc,
-                                        const usb_ep_desc_t *ep_in_desc)
+                                        const usb_ep_desc_t *ep_in_desc,
+                                        const usb_ep_desc_t *ep_out_desc)
 {
     hid_iface_t *hid_iface = calloc(1, sizeof(hid_iface_t));
 
@@ -390,6 +407,11 @@ static esp_err_t hid_host_add_interface(hid_device_t *hid_device,
             ESP_EARLY_LOGE(TAG, "HID device EP IN %#X configuration error",
                            ep_in_desc->bEndpointAddress);
         }
+    }
+
+    if (ep_out_desc) {
+        hid_iface->ep_out = ep_out_desc->bEndpointAddress;
+        hid_iface->ep_out_mps = USB_EP_DESC_GET_MPS(ep_out_desc);
     }
 
     if (iface_desc && hid_desc && ep_in_desc) {
@@ -459,6 +481,7 @@ static esp_err_t hid_host_interface_list_create(hid_device_t *hid_device,
     const usb_intf_desc_t *iface_desc = NULL;
     const hid_descriptor_t *hid_desc = NULL;
     const usb_ep_desc_t *ep_in_desc = NULL;
+    const usb_ep_desc_t *ep_out_desc = NULL;
     int iface_offset = 0;
     int hid_desc_offset = 0;
 
@@ -470,17 +493,20 @@ static esp_err_t hid_host_interface_list_create(hid_device_t *hid_device,
         hid_desc = NULL;
         hid_desc_offset = iface_offset;
         ep_in_desc = NULL;
+        ep_out_desc = NULL;
 
         if (USB_CLASS_HID == iface_desc->bInterfaceClass) {
             ESP_LOGD(TAG, "Found HID, bInterfaceNumber=%d", iface_desc->bInterfaceNumber);
             hid_desc = GET_NEXT_HID_DESC(iface_desc, total_length, hid_desc_offset);
             if (hid_desc) {
                 ep_in_desc = get_iface_ep_in(iface_desc, total_length);
+                ep_out_desc = get_iface_ep_out(iface_desc, total_length);
                 if (ep_in_desc) {
                     HID_RETURN_ON_ERROR( hid_host_add_interface(hid_device,
                                                                 iface_desc,
                                                                 hid_desc,
-                                                                ep_in_desc),
+                                                                ep_in_desc,
+                                                                ep_out_desc),
                                          "Unable to add HID Interface to the RAM list");
                 }
             }
@@ -884,6 +910,14 @@ static void in_xfer_done(usb_transfer_t *in_xfer)
     ESP_LOGE(TAG, "Transfer failed, status %d", in_xfer->status);
     // Notify user about transfer or any other error
     hid_host_user_interface_callback(iface, HID_HOST_INTERFACE_EVENT_TRANSFER_ERROR);
+}
+
+static void out_xfer_done(usb_transfer_t *out_xfer)
+{
+    if (out_xfer->status != USB_TRANSFER_STATUS_COMPLETED) {
+        ESP_LOGW(TAG, "Interrupt OUT transfer failed, status %d", out_xfer->status);
+    }
+    usb_host_transfer_free(out_xfer);
 }
 
 /** Lock HID device from other task
@@ -1815,6 +1849,41 @@ esp_err_t hid_class_request_set_report(hid_host_device_handle_t hid_dev_handle,
     };
 
     return hid_class_request_set(iface->parent, &set_report);
+}
+
+esp_err_t hid_host_device_send_output_report(hid_host_device_handle_t hid_dev_handle,
+                                             const uint8_t *report,
+                                             size_t report_length)
+{
+    hid_iface_t *iface = get_iface_by_handle(hid_dev_handle);
+
+    HID_RETURN_ON_INVALID_ARG(iface);
+    HID_RETURN_ON_INVALID_ARG(report);
+    HID_RETURN_ON_FALSE(iface->ep_out != 0,
+                        ESP_ERR_NOT_SUPPORTED,
+                        "HID interface has no interrupt OUT endpoint");
+    HID_RETURN_ON_FALSE(report_length <= iface->ep_out_mps,
+                        ESP_ERR_INVALID_ARG,
+                        "Output report is larger than endpoint packet size");
+
+    usb_transfer_t *out_xfer = NULL;
+    esp_err_t ret = usb_host_transfer_alloc(report_length, 0, &out_xfer);
+    if (ret != ESP_OK) {
+        return ret;
+    }
+
+    memcpy(out_xfer->data_buffer, report, report_length);
+    out_xfer->device_handle = iface->parent->dev_hdl;
+    out_xfer->bEndpointAddress = iface->ep_out;
+    out_xfer->num_bytes = report_length;
+    out_xfer->timeout_ms = DEFAULT_TIMEOUT_MS;
+    out_xfer->callback = out_xfer_done;
+
+    ret = usb_host_transfer_submit(out_xfer);
+    if (ret != ESP_OK) {
+        usb_host_transfer_free(out_xfer);
+    }
+    return ret;
 }
 
 esp_err_t hid_class_request_set_idle(hid_host_device_handle_t hid_dev_handle,
